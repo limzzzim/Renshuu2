@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td></td>
+            <td>Loại phòng</td>
+            <td>Số ngày ở</td>
+            <td><button onclick="tinh()">Tiền phòng</button></td>
+        </tr>
+        <tr>
+            <td>Guest</td>
+            <td><input type="number" id="a"></td>
+            <td><input type="number" id="b"></td>
+            <td><input type="number" id="c"></td>
+        </tr>       
+    </table>
+    <script>
+        function tinh(){
+            let a= +document.getElementById("a").value;
+            let b= +document.getElementById("b").value;
+            let c= +document.getElementById("c").value;
+            if (a==1){
+                document.getElementById("c").value=b*100;
+            }
+            if (a==2){
+                document.getElementById("c").value=b*80;
+            } 
+            if (a==3){
+                document.getElementById("c").value=b*50;
+            } 
+        }
+    </script>
+</body>
+</html>

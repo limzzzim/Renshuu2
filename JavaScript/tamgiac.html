@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Cạnh AB</td>
+            <td><input type="number" id="AB"></td>
+        </tr>
+        <tr>
+            <td>Cạnh AC</td>
+            <td><input type="number" id="AC"></td>
+        </tr>
+        <tr>
+            <td>Cạnh BC</td>
+            <td><input type="number" id="BC"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button onclick="tinhtoan()">Tính</button></td>
+        </tr>
+        <tr>
+            <td>Tam giác</td>
+            <td><input id="hinh" readonly ></td>
+        </tr>
+    </table>
+    <script>
+        function tinhtoan(){
+            let a = +document.getElementById('AB').value;
+            let b = +document.getElementById('AC').value;
+            let c = +document.getElementById('BC').value;
+            if  ( a+b>c && b+c>a && a+c>b) {
+                document.getElementById('hinh').type="text"
+                document.getElementById('hinh').value="Là hình tam giác"
+            } else {
+                document.getElementById('hinh').type="text"
+                document.getElementById('hinh').value="Không phải tam giác"
+            }
+        }
+        
+    </script>
+</body>
+</html>
