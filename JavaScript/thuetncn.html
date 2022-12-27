@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table id="bang">
+        <tr>
+            <td>Tên nhân viên</td>
+            <td>Lương</td>
+            <td>Bậc</td>
+            <td>Thuế suất</td>
+            <td>Phải nộp</td>
+        </tr>
+        <tr>
+            <td><input id="idTxtTen" type="text"></td>
+            <td><input id="idTxtLuong" type="number" onchange="handleTxtLuongChange()"></td>
+            <td><input id="idTxtBac" type="number" readonly></td>
+            <td><input id="idTxtThue" type="number" readonly></td>
+            <td><input id="idTxtNop" type="number" readonly></td>
+        </tr>
+        <tr>
+            <td><button onclick="addStaff">Thêm nhân viên</button></td>
+        </tr>
+    </table>
+    <script>
+        function handleTxtLuongChange(){
+            let l= +document.getElementById("idTxtLuong").value;
+        let bac, thue;
+        if (l<0){
+            alert("Số lương không hợp lệ");
+        } else {
+        if (0<l && l<5000){
+            bac = 1;
+            thue = 0.05;
+        }
+        if (5000<l && l<=10000){
+            bac = 2;
+            thue = 0.1;
+        }
+        if (10000<l && l<=18000){
+            bac = 3;
+            thue = 0.15;
+        }
+        if (18000<l && l<=32000){
+            bac = 4;
+            thue = 0.2;
+        }
+        if (32000<l && l<=52000){
+            bac = 5;
+            thue = 0.25;
+        }
+        if (52000<l && l<=80000){
+            bac = 6;
+            thue = 0.3;
+        }
+        if (l>80000){
+            bac = 7;
+            thue = 0.35;
+        }
+        }
+        document.getElementById("idTxtBac").value = bac;
+        document.getElementById("idTxtThue").value = thue;
+        document.getElementById("idTxtNop").value = l*thue;
+    }
+        function addStaff(){
+            document.getElementById("bang").innerHTML;
+        }
+    </script>
+</body>
+</html>
