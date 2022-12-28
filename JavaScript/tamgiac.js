@@ -40,18 +40,28 @@ function tinhtoan2(){
     switch (true) { 
         case (a+b>c && b+c>a && a+c>b):
             switch (true) {
-                case (a==b && b==c && c==a): 
+                case (a==b && b==c && c==a): {
                     document.getElementById('hinh').value="Tam giác đều";
-                case (a==b || b==c || c==a): 
+                    break;
+                }
+                case (a==b || b==c || c==a): {
                     document.getElementById('hinh').value="Tam giác cân";
-                case ((a**2==b**2 + c**2)||(b**2==a**2 + c**2)||(c**2==a**2 + b**2)): 
+                    break;
+                }
+                case ((a**2==b**2 + c**2)||(b**2==a**2 + c**2)||(c**2==a**2 + b**2)): {
                     document.getElementById('hinh').value="Tam giác vuông";
-                case ((a*a>b*b+c*c||b*b>a*a+c*c||c*c >a*a+b*b)): 
+                    break;
+                }
+                case ((a*a>b*b+c*c||b*b>a*a+c*c||c*c >a*a+b*b)): {
                     document.getElementById('hinh').value="Tam giác tù";
-                default:
+                    break;
+                }
+                default:{
                     document.getElementById('hinh').value="Tam giác nhọn";
-                break;
+                    break;
+                }
             }
+            break;
         default:
         document.getElementById('hinh').value="Không phải tam giác";
         break;
