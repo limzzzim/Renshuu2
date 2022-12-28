@@ -22,27 +22,14 @@
         </tr>
         <tr>
             <td></td>
-            <td><button onclick="tinhtoan()">Tính</button></td>
+            <td><button onclick="tinhtoan2()">Tính</button></td>
         </tr>
         <tr>
             <td>Tam giác</td>
             <td><input id="hinh" readonly ></td>
         </tr>
     </table>
-    <script>
-        function tinhtoan(){
-            let a = +document.getElementById('AB').value;
-            let b = +document.getElementById('AC').value;
-            let c = +document.getElementById('BC').value;
-            if  ( a+b>c && b+c>a && a+c>b) {
-                document.getElementById('hinh').type="text"
-                document.getElementById('hinh').value="Là hình tam giác"
-            } else {
-                document.getElementById('hinh').type="text"
-                document.getElementById('hinh').value="Không phải tam giác"
-            }
-        }
-        
+    <script src="tamgiac.js">
     </script>
 </body>
 </html>
