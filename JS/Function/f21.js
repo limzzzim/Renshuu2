@@ -5,9 +5,9 @@ function isPrime(number) {
     }
     if (start <= number - 1) {
         if (number % start == 0) {
-            console.log(`${number} Không phải là số nguyên tố`);;
+            console.log(`${number} Không phải là số nguyên tố`);
         } else {
-            console.log(`${number} Là số nguyên tố`);;
+            console.log(`${number} Là số nguyên tố`);
         }
     }
 }
