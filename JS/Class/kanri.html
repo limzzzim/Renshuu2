@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        /* lệnh *{}áp dụng cho hết toàn bài */
+        *{
+            font-family: monospace;
+        }
+        h3 {
+            text-align: center;
+            text-shadow: #FF9999;
+        }
+        table, th, td{
+            border-top:1px solid #FFCCCC;
+            border-bottom:1px solid #FFCCCC;
+        }
+        table{
+            border-collapse:collapse;
+            width:100%;
+        }
+        th {
+            text-align:center;
+            padding:10px;
+        }
+        td {
+            text-align:left;
+        }
+        tr:hover{
+            background-color:#FF9999;
+            cursor:pointer;
+            transform:scale(1.01);
+            transition: 0.3s;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Price quotation</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>No.</th>
+                <th>Line</th>
+                <th>Volume</th>
+                <th>Price</th>
+                <th>Discount</th>
+                <th>Amount</th>
+            </tr>
+        </thead>
+        <tbody id="tbShow">
+        </tbody>
+        <tfoot>
+            <tr>
+                <th colspan="5">Total Amount</th>
+                <th id="totalAmount" style="text-align:right"></th>
+            </tr>
+        </tfoot>
+    </table>
+    <script src="kanri.js"></script>
+</body>
+
+</html>

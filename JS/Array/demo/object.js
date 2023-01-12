@@ -29,3 +29,4 @@ let students = [
 for ( let i=0; i<students.length; i++){
     console.log(`${students[i].name} - Math: ${students[i].results.math},  Physics: ${students[i].results.physics},  Chemistry: ${students[i].results.chemistry},`);
 }
+
